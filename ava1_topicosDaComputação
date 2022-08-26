@@ -1,0 +1,20 @@
+/*Portugol*/
+
+inteiro parentes = 0
+		escreva("Quantas pessoas há na família?" + "\n")
+		leia(parentes)
+		
+		inteiro referencia = 0
+		inteiro total = 0
+		
+		enquanto(referencia != parentes) {
+		    escreva("Digite a idade do familiar; ")
+		    inteiro idade
+		    leia(idade)
+		    
+		    total = idade + total 
+		    referencia++
+		}
+		
+	    inteiro media = total / parentes
+		escreva("A idade média da família é " + media + " anos.")
