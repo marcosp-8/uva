@@ -1,0 +1,27 @@
+//VisuAlg
+
+Algoritmo "Sequência de Fibonacci"
+// Disciplina   : Linguagem e Técnica de Programação
+// Professor   : Paulo Márcio
+// Autor(a)    : Marcos Paulo Coelho
+// Data  : 10/11/2022
+Var
+// Seção de Declarações das variáveis
+t1, t2, i : Inteiro
+
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc... 
+t1 <- 34
+Escreva(t1)
+t2 <- 55
+Escreva (t2)
+
+Para i:= 3 ate 1000 faca
+     i := t1 + t2
+     Escreva(i)
+     t1 := t2
+     t2:= i
+FimPara
+
+Fimalgoritmo
