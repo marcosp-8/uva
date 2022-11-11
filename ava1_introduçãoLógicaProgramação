@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+int main() {
+    
+    printf("Digite os valores a serem calculados: \n");
+    float v1, v2;
+    scanf("%f %f", &v1, &v2);
+
+    printf("Digite o operador: \n");
+    char op;
+    scanf("%s", &op);
+
+    float soma = v1 + v2;
+
+    switch (op) {
+        case '+':
+            printf("A soma dos valores é %.2f.", soma);
+            break;
+        case '-':
+            printf("A subtração dos valores é %.2f.", (v1 - v2));
+            break;
+        case '*':
+            printf("A multiplicação dos valores é %.2f.", (v1 * v2));
+            break;
+        case '/':
+            if(v2 == 0) {
+                printf("Não existe resultado real na divisão por zero.");
+            }
+            else printf("A divisão dos valores é %.2f.", (v1 / v2));
+            break;
+        default: printf("Operador inválido!");
+    }
+
+    return 0;
+}
