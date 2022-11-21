@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+void paridade(int numero) {
+    if(numero % 2 == 0) {
+        printf("\nO número %d é par.", numero);
+    } else printf("\nO número %d é ímpar.", numero);
+}
+
+int main() {
+
+    int v1, v2;
+    int totalPar = 0;
+
+    printf("Digite o valor inicial:\n");
+    scanf("%d", &v1);
+    printf("Digite o valor final:\n");
+    scanf("%d", &v2);
+
+    for (v1 = v1; v1 <= v2; v1++) {
+        paridade(v1);
+        if(v1 % 2 == 0) totalPar++;
+    }
+    
+    printf("\nForam encontrados %d números pares.", totalPar);
+}
