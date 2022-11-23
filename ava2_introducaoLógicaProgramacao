@@ -1,9 +1,10 @@
 #include <stdio.h>
+#include <stdbool.h>
 
-void paridade(int numero) {
+bool paridade(int numero) {
     if(numero % 2 == 0) {
-        printf("\nO número %d é par.", numero);
-    } else printf("\nO número %d é ímpar.", numero);
+        return true;
+    } else return false;
 }
 
 int main() {
@@ -17,9 +18,11 @@ int main() {
     scanf("%d", &v2);
 
     for (v1 = v1; v1 <= v2; v1++) {
-        paridade(v1);
-        if(v1 % 2 == 0) totalPar++;
+        if(paridade(v1) == true) {
+            printf("\nO número %d é par.", v1);
+            totalPar++;
+        } else printf("\nO número %d é ímpar.", v1);
     }
-    
+
     printf("\nForam encontrados %d números pares.", totalPar);
 }
